@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { MoviePopularComponent } from './components/movie-popular/movie-popular.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     RegisterComponent,
     FooterComponent,
     LoginComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    MoviePopularComponent
   ],
   imports: [
     BrowserModule,

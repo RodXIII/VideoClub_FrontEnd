@@ -5,15 +5,17 @@ import { MovieCategoriesComponent } from './components/movie-categories/movie-ca
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { MoviePopularComponent } from './components/movie-popular/movie-popular.component';
 
 
 const routes: Routes = [
-  {path: "", redirectTo: "discover", pathMatch:"full"},
-  {path:"discover", component:MovieListComponent},
+  {path: "", redirectTo: "movies", pathMatch:"full"},
+  {path:"movies", component:MovieListComponent},
   {path:"movies/:category",component:MovieCategoriesComponent},
   {path:"register",component:RegisterComponent},
   {path:"login", component:LoginComponent},
-  {path:"movie/:id", component:MovieDetailComponent}
+  {path:"movies/:id", component:MovieDetailComponent},
+  {path:"movies/popular", component:MoviePopularComponent}
 ];
 
 @NgModule({

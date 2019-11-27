@@ -24,8 +24,8 @@ export class LoginComponent  {
       this.userService
       .setUser(res['user'])
       setTimeout(() => {
-        this.router.navigate(['/discover'])
-      }, 2500);
+        this.router.navigate(['/movies'])
+      }, 1500);
     },
     error=>this.res=error.error)
   }
