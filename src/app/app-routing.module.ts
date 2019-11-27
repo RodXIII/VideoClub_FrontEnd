@@ -6,17 +6,19 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { MoviePopularComponent } from './components/movie-popular/movie-popular.component';
+import { MovieTopRatedComponent } from './components/movie-top-rated/movie-top-rated.component';
 
 
 const routes: Routes = [
-  {path: "", redirectTo: "movies", pathMatch:"full"},
-  {path:"movies", component:MovieListComponent},
+  {path: "", redirectTo: "home", pathMatch:"full"},
+  {path:"home", component:MovieListComponent},
   {path:"movies/:category",component:MovieCategoriesComponent},
   {path:"register",component:RegisterComponent},
   {path:"login", component:LoginComponent},
-  {path:"movies/:id", component:MovieDetailComponent},
-  {path:"movies/popular", component:MoviePopularComponent}
-];
+  {path:"movie/:id", component:MovieDetailComponent},
+  {path:"top_rated", component:MovieTopRatedComponent},
+  {path:"popular",  component:MoviePopularComponent}
+];  
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

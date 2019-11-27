@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { MoviePopularComponent } from './components/movie-popular/movie-popular.component';
+import { MovieTopRatedComponent } from './components/movie-top-rated/movie-top-rated.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { MoviePopularComponent } from './components/movie-popular/movie-popular.
     FooterComponent,
     LoginComponent,
     MovieDetailComponent,
-    MoviePopularComponent
+    MoviePopularComponent,
+    MovieTopRatedComponent
   ],
   imports: [
     BrowserModule,

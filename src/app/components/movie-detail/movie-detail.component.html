@@ -1,2 +1,8 @@
-<p>movie-detail works!</p>
-{{movie | json}}
+<div class="movies">
+    <div class="movie">
+       <h2>{{movie[0].title}}</h2> 
+        <img src="https://image.tmdb.org/t/p/w200/{{movie[0].poster_path}}" 
+        alt="Image not found... Sorry!">
+    </div>
+    <p>{{movie[0].overview}}</p>
+  </div>

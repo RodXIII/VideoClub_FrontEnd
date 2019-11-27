@@ -14,6 +14,9 @@ export class MovieService {
   getPopularMovies(): Observable<object> {
     return this.httpClient.get(this.apiUrl + '/movies/popular')
   }
+  getRatedMovies(): Observable<object> {
+    return this.httpClient.get(this.apiUrl + '/movies/top-rated')
+  }
   getMovieById(id: string) {
     return this.httpClient.get(`${this.apiUrl}/movies/id/${id}`)
   }
