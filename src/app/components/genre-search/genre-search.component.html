@@ -1,0 +1,10 @@
+<button mat-button [matMenuTriggerFor]="menu">GENRE:</button>
+<mat-menu #menu="matMenu">
+  <a *ngFor="let genre of genres" routerLink="/genre/{{genre.idGenre}}" routerLinkActive="active-link">
+    <button mat-menu-item data-value="{{genre.nameGenre}}">{{genre.nameGenre}}</button>
+  </a>
+</mat-menu>
+<!--<ul *ngFor="let genero of generos">-->
+<!--  <li>{{genero.name}}</li>-->
+<!--</ul>-->
+

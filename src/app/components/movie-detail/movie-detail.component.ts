@@ -9,7 +9,7 @@ import { Movie } from 'src/app/models/movie.model';
   styleUrls: ['./movie-detail.component.scss']
 })
 export class MovieDetailComponent implements OnInit {
-  movie:Movie;
+  movie:any;
   constructor(
     private movieService : MovieService,
     private route:ActivatedRoute
@@ -20,21 +20,8 @@ export class MovieDetailComponent implements OnInit {
       const id=params.get('id');
       this.movieService.getMovieById(id)
       .subscribe(movie=>{
-        this.movie=Object.values(movie);
+        this.movie=movie;
       })
     })
   }
 }
-/* export class MovieListComponent implements OnInit {
-  peliculas:Array<Movie>=[];
-  constructor(private movieService:MovieService) { }
-  
-  ngOnInit() {
-    this.movieService.getDiscoverMovies()
-    .subscribe(
-      res=>this.peliculas=Object.values(res),
-      error=>console.error(error)
-    )
-  }
-
-} */

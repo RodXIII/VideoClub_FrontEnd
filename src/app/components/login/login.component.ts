@@ -23,8 +23,9 @@ export class LoginComponent  {
       this.res=res;
       this.userService
       .setUser(res['user'])
+      localStorage.setItem('token',res['token'])
       setTimeout(() => {
-        this.router.navigate(['/movies'])
+        this.router.navigate(['/home'])
       }, 1500);
     },
     error=>this.res=error.error)

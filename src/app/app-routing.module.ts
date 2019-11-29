@@ -7,17 +7,24 @@ import { LoginComponent } from './components/login/login.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { MoviePopularComponent } from './components/movie-popular/movie-popular.component';
 import { MovieTopRatedComponent } from './components/movie-top-rated/movie-top-rated.component';
+import { MovieUpcomingComponent } from './components/movie-upcoming/movie-upcoming.component';
+import { MovieResultsComponent } from './components/movie-results/movie-results.component';
+import { MovieGenreComponent } from './components/movie-genre/movie-genre.component';
 
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch:"full"},
+  {path: "results/", redirectTo: "home", pathMatch:"full"},
   {path:"home", component:MovieListComponent},
   {path:"movies/:category",component:MovieCategoriesComponent},
   {path:"register",component:RegisterComponent},
   {path:"login", component:LoginComponent},
   {path:"movie/:id", component:MovieDetailComponent},
   {path:"top_rated", component:MovieTopRatedComponent},
-  {path:"popular",  component:MoviePopularComponent}
+  {path:"popular",  component:MoviePopularComponent},
+  {path:"new",  component:MovieUpcomingComponent},
+  {path:"results/:title", component:MovieResultsComponent},
+  {path:"genre/:genre", component:MovieGenreComponent}
 ];  
 
 @NgModule({

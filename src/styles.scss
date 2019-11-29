@@ -1,9 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/@angular/material/prebuilt-themes/purple-green.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body{
     margin:0;
     color:white;
-    background-color: rgb(136, 136, 136);
+    background-color: rgb(168, 0, 0);
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.movies{
+    display: grid;
+    grid-template-columns:  repeat(5,1fr);
+    color: black;
+    .movie{
+        background-color: rgb(243, 243, 243);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem;
+        padding: 0.8rem;
+        border-radius: 0.7rem;
+        h2{
+            font-size: 1.2rem;
+        }
+        img{
+            border-radius:0.7rem;
+            width: 200px;
+        }
+    }
+}
+span {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: rgb(198, 232, 255);
+  }
+  a{
+    text-decoration: none;
+  }
+  .active-link{
+    span{
+      color:white;
+      background-color: rgb(23, 143, 255);
+    }
+  }
+

@@ -17,10 +17,24 @@ export class MovieService {
   getRatedMovies(): Observable<object> {
     return this.httpClient.get(this.apiUrl + '/movies/top-rated')
   }
+
+  getUpcoming(): Observable<object> {
+    return this.httpClient.get(this.apiUrl + '/movies/new')
+  }
+
   getMovieById(id: string) {
     return this.httpClient.get(`${this.apiUrl}/movies/id/${id}`)
   }
+
+  getMoviesByTitle(title: string): Observable<object> {
+    return this.httpClient.get(`${this.apiUrl}/movies/results/${title}`)
+  }
+
   getMoviesByCategory(category: string): Observable<object> {
     return this.httpClient.get(`${this.apiUrl}/movies/${category}`)
+  }
+
+  getMoviesByGenre(genre: string): Observable<object> {
+    return this.httpClient.get(`${this.apiUrl}/movies/${genre}`)
   }
 }

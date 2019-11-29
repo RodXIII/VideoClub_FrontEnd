@@ -4,14 +4,25 @@
     routerLinkActive="active-link">
       <span>Home</span>
     </a>
+    <a>
+      <form (ngSubmit)="setRoute()">
+        <input type="text" [(ngModel)]="title" name="text"  placeholder="Type a title here!"/>
+        <input type="submit" id="submit" value="Search..."  />
+      </form>
+    </a>
     <a routerLink="/popular"
     routerLinkActive="active-link">
-      <span>Popular Movies</span>
-    </a>
-    <a routerLink="/top_rated"
-    routerLinkActive="active-link">
-      <span>Top rated Movies</span>
-    </a>
+    <span>Popular Movies</span>
+  </a>
+  <a routerLink="/top_rated"
+  routerLinkActive="active-link">
+  <span>Top rated Movies</span>
+</a>
+<a routerLink="/new"
+routerLinkActive="active-link">
+<span>New & Upcoming</span>
+</a>
+<app-genre-search></app-genre-search>
     <div class="isLoggedIn" *ngIf="userService.getUser()">
       <a routerLink="/profile" routerLinkActive="active-link">
         <span>Profile</span>
@@ -22,12 +33,12 @@
     </div>
 
     <div class="isNotLoggedIn" *ngIf="!userService.getUser()">
-    <a routerLink="/register" routerLinkActive="active-link">
-      <span>Register</span>
-    </a>
-    <a routerLink="/login" routerLinkActive="active-link">
-      <span>Login</span>
-    </a>
-  </div>
+      <a routerLink="/register" routerLinkActive="active-link">
+        <span>Register</span>
+      </a>
+      <a routerLink="/login" routerLinkActive="active-link">
+        <span>Login</span>
+      </a>
+    </div>
   </nav>
 </header>
