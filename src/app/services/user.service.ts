@@ -17,6 +17,15 @@ export class UserService {
     return this.httpClient.post('http://localhost:3000/user/login',user)
   }
 
+  getProfile(id:string):Observable<object>{
+    return this.httpClient.get('http://localhost:3000/user/:id')
+
+  }
+
+  toOrder(user:User):Observable<object>{
+    return this.httpClient.patch('http://localhost:3000/user/order',user)
+  }
+
   getUser():User{
     return this.user;
   }

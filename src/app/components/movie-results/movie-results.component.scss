@@ -1,0 +1,15 @@
+span {
+    color: white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: rgb(168, 0, 0);
+  }
+  a{
+    text-decoration: none;
+  }
+  .active-link{
+    span{
+      color:rgb(168, 0, 0);
+      background-color: white;
+    }
+  }

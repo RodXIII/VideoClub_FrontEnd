@@ -19,6 +19,8 @@ import { MovieUpcomingComponent } from './components/movie-upcoming/movie-upcomi
 import { MovieResultsComponent } from './components/movie-results/movie-results.component';
 import { GenreSearchComponent } from './components/genre-search/genre-search.component';
 import { MovieGenreComponent } from './components/movie-genre/movie-genre.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ToOrderComponent } from './components/to-order/to-order.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { MovieGenreComponent } from './components/movie-genre/movie-genre.compon
     MovieUpcomingComponent,
     MovieResultsComponent,
     GenreSearchComponent,
-    MovieGenreComponent
+    MovieGenreComponent,
+    ProfileComponent,
+    ToOrderComponent
   ],
   imports: [
     BrowserModule,

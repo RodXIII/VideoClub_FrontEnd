@@ -2,19 +2,20 @@
   padding: 1em;
   display: flex;
   justify-content: space-around;
-  background-color: rgb(225, 254, 255);
+  background-color: white;
   span {
+    color: white;
     padding: 0.5em;
     border-radius: 0.5em;
-    background-color: rgb(198, 232, 255);
+    background-color: rgb(168, 0, 0);
   }
   a{
     text-decoration: none;
   }
   .active-link{
     span{
-      color:white;
-      background-color: rgb(23, 143, 255);
+      color:rgb(168, 0, 0);
+      background-color: white;
     }
   }
 }
