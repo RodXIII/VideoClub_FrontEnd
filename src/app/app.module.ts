@@ -21,6 +21,7 @@ import { GenreSearchComponent } from './components/genre-search/genre-search.com
 import { MovieGenreComponent } from './components/movie-genre/movie-genre.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ToOrderComponent } from './components/to-order/to-order.component';
+import { LogoutComponent } from './components/logout/logout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { ToOrderComponent } from './components/to-order/to-order.component';
     GenreSearchComponent,
     MovieGenreComponent,
     ProfileComponent,
-    ToOrderComponent
+    ToOrderComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

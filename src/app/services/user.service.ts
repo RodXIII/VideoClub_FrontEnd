@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private user:User;
+  private user:any;
+  private username:any;
   constructor(private httpClient:HttpClient) { }
 
   register(user:User):Observable<object>{
@@ -17,21 +18,36 @@ export class UserService {
     return this.httpClient.post('http://localhost:3000/user/login',user)
   }
 
-  getProfile(id:string):Observable<object>{
-    return this.httpClient.get('http://localhost:3000/user/:id')
+  getProfile():Observable<any>{
+    
+    return this.httpClient.get(`http://localhost:3000/user/${this.user}`,
+    {
+      headers: {
+        Authorization: localStorage.getItem('token')
+      }
+    });
 
   }
 
-  toOrder(user:User):Observable<object>{
-    return this.httpClient.patch('http://localhost:3000/user/order',user)
+  toOrder(movieTitle):Observable<object>{console.log(movieTitle);
+  
+    return this.httpClient.patch('http://localhost:3000/user/order',{username: this.username, title: movieTitle},
+    {
+      headers: {
+        Authorization: localStorage.getItem('token')
+      }
+    })
   }
 
   getUser():User{
     return this.user;
   }
 
-  setUser(user:User):void{
-    this.user=user;
+  setUser(user:any):void{
+    this.username=user.username;
+    this.user=user._id;
+    console.log(user._id + ' es el id');
+    
   }
 
 }

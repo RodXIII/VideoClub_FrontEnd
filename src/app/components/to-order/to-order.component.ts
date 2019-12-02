@@ -10,10 +10,7 @@ import { MovieService } from 'src/app/services/movie.service';
   styleUrls: ['./to-order.component.scss']
 })
 export class ToOrderComponent {
-  user:User={
-    username:'',
-    password:''
-  };
+
 
   constructor(private userService:UserService) { }
   rent(){

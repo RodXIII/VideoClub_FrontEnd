@@ -20,7 +20,10 @@ export class LoginComponent  {
   login(){
     this.userService.login(this.user)
     .subscribe(res=>{
-      this.res=res;
+    
+/*       const currentUser= JSON.stringify(res)
+      console.log(currentUser+' el res strigifiado es')
+      console.log() */
       this.userService
       .setUser(res['user'])
       localStorage.setItem('token',res['token'])
